@@ -10,7 +10,7 @@ jobs:
           name: Install dependencies
           command: |
             pip install pytest coverage
-      - run:
+      - run: 
           name: Run unit tests
           command: pytest test.py
       - run:
