@@ -7,6 +7,10 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Clear cache
+          command: |
+            rm -rf ~/.cache/pip
+      - run:
           name: Install dependencies
           command: |
             pip install pytest coverage
