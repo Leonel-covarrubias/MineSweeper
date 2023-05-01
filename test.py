@@ -11,12 +11,12 @@ class Testgame(unittest.TestCase):
     self.assertEqual(1, temp.SetBomb())
 
   def test_is_Bomb_cell_true(self): 
-    temp = cell()
+    temp = Cell()
     temp.bombstatus = 1
     self.assertTrue(temp.isBomb())
     
   def test_is_Bomb_cell_false(self): 
-    temp = cell()
+    temp = Cell()
     self.assertFalse(temp.isBomb())
     
   def test_mark_square_Edge_case(self):
@@ -41,8 +41,8 @@ class Testgame(unittest.TestCase):
   def test_check_loss_condition_True(self):
     board = Board()
     board.cells[0].bombstatus = 1 
-    self.assertTrue(board.check_loss_condition(1))
+    self.assertTrue(board.Check_loss_condition(1))
     
   def test_check_loss_condition_false(self):
     board = Board()
-    self.assertFalse(board.check_loss_condition(1))
+    self.assertFalse(board.Check_loss_condition(1))
