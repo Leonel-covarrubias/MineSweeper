@@ -10,12 +10,12 @@ jobs:
           name: Install dependencies
           command: |
             pip install pytest coverage
-      - run: 
+      - run:
           name: Run unit tests
-          command: pytest testFile.py 
+          command: pytest test.py
       - run:
           name: Generate coverage report
-          command: coverage run --source=Minesweeper.py -m pytest testFile.py && coverage report
+          command: coverage run --source=Minesweeper.py -m pytest test.py && coverage report
 
 workflows:
   build-and-test:
