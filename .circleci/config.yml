@@ -6,7 +6,8 @@ jobs:
       - image: circleci/python:3.8.3
     steps:
       - checkout
-      - run: pip install -r requirements.txt
+      - run: pip install pytest
+      - run: pip install coverage
       - run: python Minesweeper.py
   test:
     docker:
