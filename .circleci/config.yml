@@ -15,7 +15,7 @@ jobs:
     steps:
       - checkout
       - run: pip install pytest
-      - run: pip install coverage
+      - run: pip install coverage 
       - run: pytest test.py
       - run:
           name: Generate coverage report
